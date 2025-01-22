@@ -1,14 +1,6 @@
 from pyniryo2 import *
 
-def launch():
-    try: 
-        # Creamos el robot
-        robot = NiryoRobot("<Direccion brazo>")
-        print("Conexión establecida")
-
-        # Calibramos el brazo
-        print("Calibrando...")
-        robot.calibrate_auto()
+def pick_and_place(robot: NiryoRobot):
 
         # Definir las posiciones
 
@@ -44,10 +36,4 @@ def launch():
 
         print("Proceso completado.")
 
-    except NiryoRobotException as e:
-        print(f"Error: {e}")
-
-    finally:
-        # Cerrar la conexión
-        robot.close_connection()
-        print("Conexión cerrada.")
+        return
