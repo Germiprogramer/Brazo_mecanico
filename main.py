@@ -3,6 +3,7 @@ from launch import pick_and_place
 if __name__ == "__main__":
     try: 
         # Creamos el robot
+        workspace_name = "UAX_lab"
         robot = NiryoRobot("<Direccion brazo>")
         print("Conexión establecida")
 
@@ -15,6 +16,6 @@ if __name__ == "__main__":
 
     finally:
         # Cerrar la conexión
-        robot.close_connection()
+        robot.end()
         print("Conexión cerrada.")
 
