@@ -1,4 +1,4 @@
-from utils import *
+from pyniryo2 import *
 
 def launch():
     try: 
