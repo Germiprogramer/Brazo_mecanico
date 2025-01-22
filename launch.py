@@ -1,9 +1,9 @@
-from utils import *
+from pyniryo2 import *
 
 def launch():
     try: 
         # Creamos el robot
-        robot = NiryoRobot("<Direccion brazo>")
+        robot = NiryoRobot("10.10.10.10")
         print("Conexión establecida")
 
         # Calibramos el brazo
@@ -44,10 +44,13 @@ def launch():
 
         print("Proceso completado.")
 
-    except NiryoRobotException as e:
-        print(f"Error: {e}")
+    #except NiryoRobotException as e:
+        #print(f"Error: {e}")
+
+    except:
+        print("Error")
 
     finally:
         # Cerrar la conexión
-        robot.close_connection()
+        robot.end()
         print("Conexión cerrada.")
